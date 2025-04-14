@@ -13,7 +13,7 @@ def home():
 def debug():
     return render_template('debug.html')
 
-@main.route('/register')
+@main.route('/register' , methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
     if form.validate_on_submit():
