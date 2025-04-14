@@ -22,14 +22,14 @@ def register():
 
         hashed_password = generate_password_hash(form.password.data)
 
-        new_user = User(
+        user = User(
             name=form.name.data,
             email=form.email.data,
             phone=form.phone.data,
             password=hashed_password
         )
-        db.session.add(new_user)
-        db.session.commit()
+        user.save()
+
         flash('Registration successful! You can now log in.', 'success')
         return redirect(url_for('main.index'))
 

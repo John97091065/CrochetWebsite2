@@ -16,6 +16,7 @@ class User(db.Model):
     def __repr__(self):
         return f"<User {self.name}>"
 
+
 class Product(db.Model):
     __tablename__ = 'products'
     id = db.Column(db.Integer, primary_key=True)
