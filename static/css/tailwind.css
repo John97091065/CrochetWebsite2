@@ -831,10 +831,6 @@ p {
   min-height: 12rem;
 }
 
-.min-h-64 {
-  min-height: 16rem;
-}
-
 .min-h-\[calc\(100vh-7rem\)\] {
   min-height: calc(100vh - 7rem);
 }
@@ -843,22 +839,9 @@ p {
   width: 24rem;
 }
 
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-full {
-  width: 100%;
-}
-
 .w-min {
   width: -moz-min-content;
   width: min-content;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 .flex-col {
@@ -946,19 +929,9 @@ p {
   background-color: rgb(255 107 105 / var(--tw-bg-opacity, 1));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1));
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: rgb(252 198 198 / var(--tw-bg-opacity, 1));
-}
-
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(104 134 122 / var(--tw-bg-opacity, 1));
 }
 
 .bg-secondary-50 {
