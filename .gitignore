@@ -1,4 +1,43 @@
-node_modules
-.venv
-nohup.out
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# --- Environment & Config ---
 .env
+.env.*
+.venv/
+*.sqlite3
+*.log
+*.db
+
+# --- Node ---
+node_modules/
+yarn.lock
+package-lock.json
+npm-debug.log*
+
+# --- OS-specific ---
+.DS_Store
+Thumbs.db
+
+# --- Editor/IDE ---
+.vscode/
+.idea/
+*.swp
+*~
+
+# --- Others ---
+nohup.out
+coverage/
+*.cover
+*.pyc
+*.pyo
+*.pyd
+
+# If you're deploying and want to keep yarn.lock:
+# !yarn.lock
