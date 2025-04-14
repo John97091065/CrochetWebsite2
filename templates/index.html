@@ -1,0 +1,43 @@
+{% extends "layouts/default.html" %}
+
+{% block title %} M.B.S - Debug {% endblock %}
+
+{% block content %}
+    <div class="_page bg-primary flex flex-col h-screen overflow-auto">
+        <header class="flex justify-between items-center h-28 px-28 py-4">
+            <div class="flex gap-4 h-full">
+                <img class="max-h-fit" src="{{ url_for('static', filename='/img/6.png') }}" alt="Logo">
+                <nav class="flex gap-3 text-xl items-center text-accent whitespace-nowrap">
+                    <a class="hover:text-white active:text-white" href="/" class="active" >Home</a>
+                    <a class="hover:text-white active:text-white" href="/item">About me</a>
+                    <a class="hover:text-white active:text-white" href="/contact">Contact</a>
+                </nav>
+            </div>
+            <form class="flex" action="/#">
+                <button class="bg-accent p-2.5 text-lg aspect-square flex justify-center items-center rounded-l-lg text-white border-r border-accent hover:bg-white hover:text-accent transition-colors duration-200" type="submit"><i class="fa-solid fa-search"></i></button>
+                <input class="px-2 py-2 rounded-r-lg w-96" type="text" placeholder="Search..." name="search">
+            </form>
+        </header>
+
+        <section data-aos="fade-down" class="min-h-[calc(100vh-7rem)] flex flex-col gap-6 justify-center items-center">
+            <h1 class="font-[stylish] font-normal text-8xl text-white">Made By Shandy</h1>
+            <h3 class="text-accent text-2xl">Where Creativity Meets Coziness.</h3>
+        </section>
+
+        <section class="flex h-fit justify-center bg-secondary-50 border-b-2 border-secondary">
+            <ul class="flex border-x-2 border-secondary divide-x-2 divide-secondary h-fit w-min">
+                <li><a class="block py-3 px-8 text-secondary-500 hover:text-white hover:bg-secondary transition-colors duration-300" href="">Women</a></li>
+                <li><a class="block py-3 px-8 text-secondary-500 hover:text-white hover:bg-secondary transition-colors duration-300" href="">Men</a></li>
+                <li><a class="block py-3 px-8 text-secondary-500 hover:text-white hover:bg-secondary transition-colors duration-300" href="">plushies</a></li>
+                <li><a class="block py-3 px-8 text-secondary-500 hover:text-white hover:bg-secondary transition-colors duration-300" href="">Macrame</a></li>
+            </ul>
+        </section>
+
+    <section class="min-h-48"></section>
+
+    <footer class="min-h-64 flex flex-col items-center bg-secondary">
+        <div class="flex w-full flex-1 bg-gray-200">NIEUW FOOTER DESIGN?</div>
+        <p class="py-2 px-2 w-fit text-white">&copy; 2024 John Hodge | Brian Post</p>
+    </footer>
+    </div>
+{% endblock %}
