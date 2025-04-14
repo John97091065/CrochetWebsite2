@@ -9,10 +9,6 @@ main = Blueprint('main', __name__)
 def home():
     return render_template('index.html')
 
-@main.route('/debug')
-def debug():
-    return render_template('debug.html')
-
 @main.route('/register' , methods=['GET', 'POST'])
 def register():
     form = RegisterForm()
