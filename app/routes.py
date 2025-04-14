@@ -28,7 +28,8 @@ def register():
             phone=form.phone.data,
             password=hashed_password
         )
-        user.save()
+        db.session.add(user)
+        db.session.commit()
 
         flash('Registration successful! You can now log in.', 'success')
         return redirect(url_for('main.index'))
