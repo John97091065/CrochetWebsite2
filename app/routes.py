@@ -23,7 +23,7 @@ def register():
         new_user = User(
             name=form.name.data,
             email=form.email.data,
-            phonenumber=form.phone_number.data,
+            phone=form.phone_number.data,
             password=hashed_password
         )
         db.session.add(new_user)
