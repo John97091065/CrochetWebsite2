@@ -25,7 +25,7 @@ def build_tailwind():
 def watch_tailwind():
     try:
         print("Watching for Tailwind changes...")
-        subprocess.Popen(["npm", "run", "watch"])
+        subprocess.Popen(["npm", "run", "watch"], shell=True)
     except subprocess.CalledProcessError as e:
         logger.error(f"Error starting watch mode: {e}")
         exit(1)
