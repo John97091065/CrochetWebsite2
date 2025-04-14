@@ -1,19 +1,14 @@
-<header>
-    <nav>
-        <div class="navBar">
-
-            <div class="nLink">
-                <img src="/static/img/6.png" alt="logo" style="width: 100px;">
-                <a href="/" class="active" >Home</a>
-                <a href="/item">About me</a>
-                <a href="/contact">Contact</a>
-            </div>
-
-            <form action="/#">
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" placeholder="Search.." name="search">
-            </form>
-
-        </div>
-    </nav>
+<header class="flex justify-between items-center h-28 px-28 py-4">
+    <div class="flex gap-4 h-full">
+        <img class="max-h-fit" src="{{ url_for('static', filename='/img/6.png') }}" alt="Logo">
+        <nav class="flex gap-3 text-xl items-center text-accent whitespace-nowrap">
+            <a class="hover:text-white active:text-white" href="/" class="active" >Home</a>
+            <a class="hover:text-white active:text-white" href="/item">About me</a>
+            <a class="hover:text-white active:text-white" href="/contact">Contact</a>
+        </nav>
+    </div>
+    <form class="flex" action="/#">
+        <button class="bg-accent p-2.5 text-lg aspect-square flex justify-center items-center rounded-l-lg text-white border-r border-accent hover:bg-white hover:text-accent transition-colors duration-200" type="submit"><i class="fa-solid fa-search"></i></button>
+        <input class="px-2 py-2 rounded-r-lg w-96" type="text" placeholder="Search..." name="search">
+    </form>
 </header>
