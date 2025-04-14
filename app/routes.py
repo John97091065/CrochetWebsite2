@@ -6,13 +6,15 @@ from .models import db, User
 main = Blueprint('main', __name__)
 
 @main.route('/')
-def home():
+def index():
     return render_template('index.html')
 
 @main.route('/register' , methods=['GET', 'POST'])
 def register():
+    print('accessed')
     form = RegisterForm()
     if form.validate_on_submit():
+        print('accessed')
         existing_user = User.query.filter_by(email=form.email.data).first()
         if existing_user:
             flash('Email already registered. Try logging in.', 'warning')
@@ -23,7 +25,7 @@ def register():
         new_user = User(
             name=form.name.data,
             email=form.email.data,
-            phone=form.phone_number.data,
+            phone=form.phone.data,
             password=hashed_password
         )
         db.session.add(new_user)
