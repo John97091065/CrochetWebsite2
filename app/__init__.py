@@ -4,6 +4,7 @@ import subprocess
 import logging
 from flask import Flask
 from config import DevelopmentConfig, ProductionConfig
+from flask_wtf.csrf import CSRFProtect
 from flask_migrate import Migrate
 from .models import db
 import pymysql
@@ -13,6 +14,7 @@ pymysql.install_as_MySQLdb()
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
+csrf = CSRFProtect()
 
 def build_tailwind():
     try:
@@ -47,6 +49,7 @@ def create_app():
         logger.critical(f"ERROR: Environment '{env}' does not exist")
         sys.exit(1)
 
+    csrf.init_app(app)
     db.init_app(app)  # Initialize the db instance with the app
     migrate = Migrate(app, db)
 
